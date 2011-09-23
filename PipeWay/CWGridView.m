@@ -17,35 +17,24 @@
 @implementation CWGridView
 
 
-@synthesize tapGestureRecognizer;
 @synthesize delegate;
 @synthesize datasource;
 @synthesize rowArray = _rowArray;
 
-- (id)initWithFrame:(CGRect)frame
+
+-(void)viewDidLoad;
 {
-  self = [super initWithFrame:frame];
-  if (self) {
-    self.rowArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfRows];
-    for (int i=0; i<=kNumberOfRows; i++) {
-      NSArray *columnArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfColumns];
-      [self.rowArray insertObject:columnArray atIndex:i];
-    }
+  self.rowArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfRows];
+  for (int i=0; i<=kNumberOfRows; i++) {
+    NSArray *columnArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfColumns];
+    [self.rowArray insertObject:columnArray atIndex:i];
   }
-  return self;
 }
+
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer;
 {
-  self.backgroundColor = [UIColor redColor];
+  
 }
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
 
 -(UIView*)viewForRow:(NSUInteger)row column:(NSUInteger)column;
 {
@@ -79,7 +68,7 @@
         pipeView.frame = CGRectMake(x, y, pipeWidth, pipeHeight);
         if ([self viewForRow:row column:col] == nil) {
           [self addSubview:pipeView];
-          
+          [self setView:pipeView forRow:row column:col];
         }
       }
     }

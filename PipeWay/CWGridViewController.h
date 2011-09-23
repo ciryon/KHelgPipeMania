@@ -15,5 +15,6 @@
 {
 
 }
+@property(nonatomic, retain) UIGestureRecognizer* tapGestureRecognizer;
 
 @end

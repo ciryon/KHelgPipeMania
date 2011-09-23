@@ -25,6 +25,11 @@ static CWGrid *_grid;
       NSArray *columnArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfColumns];
       [_grid.rowArray insertObject:columnArray atIndex:i];
     }
+    
+    
+    // Temp insert one
+    CWPipe *pipe = [[CWPipe alloc] init];
+    [_grid setPipe:pipe forRow:5 column:5];
   }
   return _grid;
 }
