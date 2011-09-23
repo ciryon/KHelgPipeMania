@@ -12,7 +12,8 @@
 @interface CWGridViewController()
 
 -(void)didStartWaterWithNotification:(NSNotification*)notification;
-
+-(void)startTimer;
+-(void)timerUpdate;
 @end
 
 
@@ -20,6 +21,8 @@
 
 @synthesize tapGestureRecognizer;
 @synthesize pipeQueue;
+@synthesize timerLabel;
+@synthesize startDate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,6 +55,8 @@
   [self.view addGestureRecognizer:self.tapGestureRecognizer];
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStartWaterWithNotification:) name:@"CWDidStartWater" object:nil];
+  
+  [self startTimer];
 }
 
 - (void)viewDidUnload
@@ -103,7 +108,7 @@
 {
   NSLog(@"Did tap at (%d,%d)",row,col);
     CWPipe* newPipe = [[[self.pipeQueue popPipe] retain]autorelease];
-  [[CWGrid standardGrid] setPipe: newPipe forRow:row column:col  ];
+  [[CWGrid standardGrid] setPipe: newPipe forRow:row column:col];
   [self.view setNeedsLayout];
   //Add new pipeview to gridview
   
@@ -116,5 +121,22 @@
 {
   NSLog(@"Got message that water is awayyyy");
 }
+
+#pragma mark Score label
+-(void)startTimer;
+{
+  self.startDate = [NSDate date];
+
+  [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
+  
+}
+
+-(void)timerUpdate;
+{
+
+  NSDate *date = [NSDate date];
+  self.timerLabel.text = [NSString stringWithFormat:@"%f",[date timeIntervalSinceDate:self.startDate]];
+}
+
 
 @end

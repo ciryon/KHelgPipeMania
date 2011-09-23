@@ -15,6 +15,10 @@
 {
 
 }
+
+@property(nonatomic, retain) IBOutlet UILabel *timerLabel;
+@property(nonatomic, retain) NSDate *startDate;
+
 @property(nonatomic, retain) UIGestureRecognizer* tapGestureRecognizer;
 @property(nonatomic, retain) IBOutlet id<CWPipeQueue> pipeQueue;
 @end
