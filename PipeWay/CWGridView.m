@@ -77,6 +77,8 @@
         pipeView.frame = CGRectMake(x, y, pipeWidth, pipeHeight);
         if ([self viewForRow:row column:col] == nil) {
           [self addSubview:pipeView];
+
+          
           [self setView:pipeView forRow:row column:col];
         }
       }
