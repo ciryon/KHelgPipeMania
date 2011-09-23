@@ -16,24 +16,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-      int numberOfItems = [self numberOfItemsInQueue:(CWPipeQueueView*)self.view];
-      self.pipes = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
-      self.pipeViews = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
-      
-      
-      for (int i=0; i<=numberOfItems; i++) {
-        // Populate with 5 first pipes
-        CWPipe *pipe = [self getRandomPipe];
-        [self.pipes addObject:pipe];
-        
-        // Populate with 5 first pipe views
-        CWPipeView *pipeView = [[CWPipeView alloc] initWithType:pipe.type];
-        [self.pipes addObject:pipeView];
-      }
-      
-      
-      
-      
       
     }
     return self;
@@ -49,11 +31,24 @@
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
+-(void)awakeFromNib;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-  [self.view setBackgroundColor:[UIColor blueColor]];
+    int numberOfItems = 5;
+    self.pipes = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
+    self.pipeViews = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
+    
+    
+    for (int i=0; i<=numberOfItems; i++) {
+        // Populate with 5 first pipes
+        CWPipe *pipe = [self getRandomPipe];
+        [self.pipes addObject:pipe];
+        
+        // Populate with 5 first pipe views
+        CWPipeView *pipeView = [[CWPipeView alloc] initWithType:pipe.type];
+        [self.pipes addObject:pipeView];
+    }
 }
 
 - (void)viewDidUnload
@@ -75,7 +70,7 @@
 
 - (NSUInteger)numberOfItemsInQueue:(CWPipeQueueView*)view;
 {
-    return 5;
+    return [self.pipes count];
 }
 -(CWPipe*)getRandomPipe;
 {

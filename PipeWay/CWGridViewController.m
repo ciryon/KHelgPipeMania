@@ -12,7 +12,7 @@
 @implementation CWGridViewController
 
 @synthesize tapGestureRecognizer;
-
+@synthesize pipeQueue;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -93,7 +93,8 @@
 -(void) gridView:(CWGridView*) view didTapCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
 {
   NSLog(@"Did tap at (%d,%d)",row,col);
-  [[CWGrid standardGrid] setPipe:[self.queueDelegate nextPipe] forRow:row column:col  ];
+    CWPipe* newPipe = [[[self.pipeQueue popPipe] retain]autorelease];
+  [[CWGrid standardGrid] setPipe: newPipe forRow:row column:col  ];
   [self.view setNeedsLayout];
   //Add new pipeview to gridview
   
