@@ -39,15 +39,14 @@
     self.pipes = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
     self.pipeViews = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
     
-    
-    for (int i=0; i<=numberOfItems; i++) {
+    for (int i=0; i<numberOfItems; i++) {
         // Populate with 5 first pipes
         CWPipe *pipe = [self getRandomPipe];
         [self.pipes addObject:pipe];
         
         // Populate with 5 first pipe views
         CWPipeView *pipeView = [[CWPipeView alloc] initWithType:pipe.type];
-        [self.pipes addObject:pipeView];
+        [self.pipeViews addObject:pipeView];
     }
 }
 
