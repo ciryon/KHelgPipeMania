@@ -16,7 +16,22 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+      int numberOfItems = [self numberOfItemsInQueue:(CWPipeQueueView*)self.view];
+      self.pipes = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
+      self.pipeViews = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
+      
+      
+      for (int i=0; i<=numberOfItems; i++) {
+        // Populate with 5 first pipes
+        
+        
+        // Populate with 5 first pipe views
+      }
+      
+      
+      
+      
+      
     }
     return self;
 }
