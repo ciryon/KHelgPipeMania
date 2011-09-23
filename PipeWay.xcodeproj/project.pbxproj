@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19F9A672142C715A00AC8466 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F9A671142C715A00AC8466 /* UIKit.framework */; };
+		19F9A674142C715A00AC8466 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F9A673142C715A00AC8466 /* Foundation.framework */; };
+		19F9A676142C715A00AC8466 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F9A675142C715A00AC8466 /* CoreGraphics.framework */; };
+		19F9A67C142C715A00AC8466 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19F9A67A142C715A00AC8466 /* InfoPlist.strings */; };
+		19F9A67F142C715A00AC8466 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9A67E142C715A00AC8466 /* main.m */; };
+		19F9A682142C715A00AC8466 /* PipeWayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9A681142C715A00AC8466 /* PipeWayAppDelegate.m */; };
+		19F9A685142C715A00AC8466 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F9A683142C715A00AC8466 /* MainWindow.xib */; };
+		19F9A688142C715A00AC8466 /* PipeWayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9A687142C715A00AC8466 /* PipeWayViewController.m */; };
+		19F9A68B142C715A00AC8466 /* PipeWayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F9A689142C715A00AC8466 /* PipeWayViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19F9A66D142C715A00AC8466 /* PipeWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PipeWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19F9A671142C715A00AC8466 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		19F9A673142C715A00AC8466 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		19F9A675142C715A00AC8466 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		19F9A679142C715A00AC8466 /* PipeWay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PipeWay-Info.plist"; sourceTree = "<group>"; };
+		19F9A67B142C715A00AC8466 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		19F9A67D142C715A00AC8466 /* PipeWay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PipeWay-Prefix.pch"; sourceTree = "<group>"; };
+		19F9A67E142C715A00AC8466 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19F9A680142C715A00AC8466 /* PipeWayAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipeWayAppDelegate.h; sourceTree = "<group>"; };
+		19F9A681142C715A00AC8466 /* PipeWayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PipeWayAppDelegate.m; sourceTree = "<group>"; };
+		19F9A684142C715A00AC8466 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		19F9A686142C715A00AC8466 /* PipeWayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipeWayViewController.h; sourceTree = "<group>"; };
+		19F9A687142C715A00AC8466 /* PipeWayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PipeWayViewController.m; sourceTree = "<group>"; };
+		19F9A68A142C715A00AC8466 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PipeWayViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19F9A66A142C715A00AC8466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F9A672142C715A00AC8466 /* UIKit.framework in Frameworks */,
+				19F9A674142C715A00AC8466 /* Foundation.framework in Frameworks */,
+				19F9A676142C715A00AC8466 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19F9A662142C715A00AC8466 = {
+			isa = PBXGroup;
+			children = (
+				19F9A677142C715A00AC8466 /* PipeWay */,
+				19F9A670142C715A00AC8466 /* Frameworks */,
+				19F9A66E142C715A00AC8466 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19F9A66E142C715A00AC8466 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19F9A66D142C715A00AC8466 /* PipeWay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19F9A670142C715A00AC8466 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19F9A671142C715A00AC8466 /* UIKit.framework */,
+				19F9A673142C715A00AC8466 /* Foundation.framework */,
+				19F9A675142C715A00AC8466 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19F9A677142C715A00AC8466 /* PipeWay */ = {
+			isa = PBXGroup;
+			children = (
+				19F9A680142C715A00AC8466 /* PipeWayAppDelegate.h */,
+				19F9A681142C715A00AC8466 /* PipeWayAppDelegate.m */,
+				19F9A683142C715A00AC8466 /* MainWindow.xib */,
+				19F9A686142C715A00AC8466 /* PipeWayViewController.h */,
+				19F9A687142C715A00AC8466 /* PipeWayViewController.m */,
+				19F9A689142C715A00AC8466 /* PipeWayViewController.xib */,
+				19F9A678142C715A00AC8466 /* Supporting Files */,
+			);
+			path = PipeWay;
+			sourceTree = "<group>";
+		};
+		19F9A678142C715A00AC8466 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				19F9A679142C715A00AC8466 /* PipeWay-Info.plist */,
+				19F9A67A142C715A00AC8466 /* InfoPlist.strings */,
+				19F9A67D142C715A00AC8466 /* PipeWay-Prefix.pch */,
+				19F9A67E142C715A00AC8466 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19F9A66C142C715A00AC8466 /* PipeWay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19F9A68E142C715A00AC8466 /* Build configuration list for PBXNativeTarget "PipeWay" */;
+			buildPhases = (
+				19F9A669142C715A00AC8466 /* Sources */,
+				19F9A66A142C715A00AC8466 /* Frameworks */,
+				19F9A66B142C715A00AC8466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PipeWay;
+			productName = PipeWay;
+			productReference = 19F9A66D142C715A00AC8466 /* PipeWay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19F9A664142C715A00AC8466 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Jayway AB";
+			};
+			buildConfigurationList = 19F9A667142C715A00AC8466 /* Build configuration list for PBXProject "PipeWay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 19F9A662142C715A00AC8466;
+			productRefGroup = 19F9A66E142C715A00AC8466 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19F9A66C142C715A00AC8466 /* PipeWay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19F9A66B142C715A00AC8466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F9A67C142C715A00AC8466 /* InfoPlist.strings in Resources */,
+				19F9A685142C715A00AC8466 /* MainWindow.xib in Resources */,
+				19F9A68B142C715A00AC8466 /* PipeWayViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19F9A669142C715A00AC8466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19F9A67F142C715A00AC8466 /* main.m in Sources */,
+				19F9A682142C715A00AC8466 /* PipeWayAppDelegate.m in Sources */,
+				19F9A688142C715A00AC8466 /* PipeWayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19F9A67A142C715A00AC8466 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F9A67B142C715A00AC8466 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		19F9A683142C715A00AC8466 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F9A684142C715A00AC8466 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		19F9A689142C715A00AC8466 /* PipeWayViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19F9A68A142C715A00AC8466 /* en */,
+			);
+			name = PipeWayViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19F9A68C142C715A00AC8466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		19F9A68D142C715A00AC8466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		19F9A68F142C715A00AC8466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PipeWay/PipeWay-Prefix.pch";
+				INFOPLIST_FILE = "PipeWay/PipeWay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		19F9A690142C715A00AC8466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PipeWay/PipeWay-Prefix.pch";
+				INFOPLIST_FILE = "PipeWay/PipeWay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19F9A667142C715A00AC8466 /* Build configuration list for PBXProject "PipeWay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19F9A68C142C715A00AC8466 /* Debug */,
+				19F9A68D142C715A00AC8466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19F9A68E142C715A00AC8466 /* Build configuration list for PBXNativeTarget "PipeWay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19F9A68F142C715A00AC8466 /* Debug */,
+				19F9A690142C715A00AC8466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19F9A664142C715A00AC8466 /* Project object */;
+}
