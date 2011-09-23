@@ -11,12 +11,14 @@
 
 @implementation CWGridViewController
 
+@synthesize tapGestureRecognizer;
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
-    }
+           }
     return self;
 }
 
@@ -34,11 +36,12 @@
 }
 
 #pragma mark - View lifecycle
-
-- (void)viewDidLoad
+- (void)viewDidLoad;
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self.view action:@selector(handleGesture:)];
+    [self.view addGestureRecognizer:self.tapGestureRecognizer];
 }
 
 - (void)viewDidUnload

@@ -12,7 +12,6 @@
 @implementation CWGridView
 
 
-@synthesize tapGestureRecognizer;
 @synthesize delegate;
 @synthesize datasource;
 
@@ -20,13 +19,15 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-        [self addGestureRecognizer:self.tapGestureRecognizer];
     }
     return self;
 }
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer;
 {
+    CGPoint point  = [gestureRecognizer locationInView:self];
+   NSUInteger cols =  [self.datasource numberOfColumnsForGridView:self];
+    NSUInteger rows = [self.datasource numberOfRowsForGridView:self];
+    self.frame.size.width/
     self.backgroundColor = [UIColor redColor];
 }
 /*
