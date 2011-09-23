@@ -10,13 +10,17 @@
 #import "CWPIpeView.h"
 
 @interface CWGridView : UIView {
-    
+    id <CWGridViewDelegate> _delegate;
+    UIGestureRecognizer* _tapGestureRecognizer;
 }
+
 @end
 
 @protocol CWGridViewDelegate
 
 - (CWPipeView*) gridView:(CWGridView*) view viewForCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
+
+-(void) gridView:(CWGridView*) view didTapCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
 
 
 @end
