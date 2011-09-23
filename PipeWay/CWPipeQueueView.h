@@ -13,7 +13,7 @@
 @interface CWPipeQueueView : UIView {
     
 }
-@property(nonatomic, retain) id<CWPipeQueueDataSource> datasource;
+@property(nonatomic, retain) IBOutlet id<CWPipeQueueDataSource> datasource;
 
 @end
 @protocol CWPipeQueueDataSource<NSObject>;
