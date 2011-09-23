@@ -33,7 +33,12 @@
 
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer;
 {
-  
+    CGPoint point  = [gestureRecognizer locationInView:self];
+   NSUInteger cols =  [self.datasource numberOfColumnsForGridView:self];
+    NSUInteger rows = [self.datasource numberOfRowsForGridView:self];
+    NSUInteger col = floor(point.x/(self.frame.size.width/cols));
+    NSUInteger row = floor(point.y/(self.frame.size.height/rows));
+    [self.delegate gridView:self didTapCellAtRow:row inColumn:col];
 }
 
 -(UIView*)viewForRow:(NSUInteger)row column:(NSUInteger)column;
