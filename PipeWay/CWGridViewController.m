@@ -54,4 +54,35 @@
 	return YES;
 }
 
+#pragma mark Data Source methods
+
+- (UIView*)gridView:(CWGridView*)view pipeForRow:(NSUInteger)row column:(NSUInteger)column;
+{
+  
+  return nil;
+}
+
+- (NSUInteger)numberOfRowsForGridView:(CWGridView*)view;
+{
+  return [[CWGrid standardGrid] numberOfRows];
+}
+
+- (NSUInteger)numberOfColumnsForGridView:(CWGridView*)view;
+{
+  return [[CWGrid standardGrid] numberOfColumns];
+}
+
+
+#pragma mark Delegate methods
+
+- (CWPipeView*) gridView:(CWGridView*) view viewForCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
+{
+  return nil;
+}
+
+-(void) gridView:(CWGridView*) view didTapCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
+{
+  // TODO Handle tap
+}
+
 @end

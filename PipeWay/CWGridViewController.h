@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CWGrid.h"
+#import "CWGridView.h"
 
-@interface CWGridViewController : UIViewController  {
+@interface CWGridViewController : UIViewController 
+<CWGridViewDelegate,CWGridDataSource>
+{
 
 }
 
