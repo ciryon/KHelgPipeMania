@@ -39,6 +39,29 @@
 }
 */
 
+- (void)layoutSubviews;
+{
+  int cols = [self.datasource numberOfColumnsForGridView:self];
+  int rows = [self.datasource numberOfRowsForGridView:self];
+  
+  float width = self.frame.size.width;
+  float height = self.frame.size.height;
+  
+  for (int row=0; row<=rows; row++) {
+    for (int col=0; col<=cols; col++) {
+      UIView *pipeView = [self.delegate gridView:self viewForCellAtRow:row inColumn:col];
+      if (pipeView!=nil) {
+        float pipeWidth = self.frame.size.width/cols;
+        float pipeHeight = self.frame.size.height/rows;
+        float x = 0 + pipeWidth*col;
+        float y = 0 + pipeHeight*row;
+        pipeView.frame = CGRectMake(x, y, pipeWidth, pipeHeight);
+      }
+    }
+  }
+  
+}
+
 - (void)dealloc;
 {
     [super dealloc];

@@ -80,6 +80,7 @@
 
 - (CWPipeView*) gridView:(CWGridView*) view viewForCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
 {
+  
   return nil;
 }
 
