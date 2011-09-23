@@ -8,20 +8,29 @@
 
 #import "CWGridView.h"
 
+@interface CWGridView()
+
+
+
+@end
 
 @implementation CWGridView
 
 
 @synthesize delegate;
 @synthesize datasource;
+@synthesize rowArray = _rowArray;
 
-- (id)initWithFrame:(CGRect)frame
+
+-(void)viewDidLoad;
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-    }
-    return self;
+  self.rowArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfRows];
+  for (int i=0; i<=kNumberOfRows; i++) {
+    NSArray *columnArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfColumns];
+    [self.rowArray insertObject:columnArray atIndex:i];
+  }
 }
+
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer;
 {
     CGPoint point  = [gestureRecognizer locationInView:self];
@@ -31,14 +40,19 @@
     NSUInteger row = floor(point.y/(self.frame.size.height/rows));
     [self.delegate gridView:self didTapCellAtRow:row inColumn:col];
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+
+-(UIView*)viewForRow:(NSUInteger)row column:(NSUInteger)column;
 {
-    // Drawing code
+  NSArray *columnArray = [self.rowArray objectAtIndex:row];
+  UIView *view = [columnArray objectAtIndex:column];
+  return view;
 }
-*/
+
+-(void)setView:(UIView*) view forRow:(NSUInteger)row column:(NSUInteger)column;
+{
+  NSMutableArray *columnArray = [self.rowArray objectAtIndex:row];
+  [columnArray insertObject:view atIndex:column];
+}
 
 - (void)layoutSubviews;
 {
@@ -52,11 +66,15 @@
     for (int col=0; col<=cols; col++) {
       UIView *pipeView = [self.delegate gridView:self viewForCellAtRow:row inColumn:col];
       if (pipeView!=nil) {
-        float pipeWidth = self.frame.size.width/cols;
-        float pipeHeight = self.frame.size.height/rows;
+        float pipeWidth = width/cols;
+        float pipeHeight = height/rows;
         float x = 0 + pipeWidth*col;
         float y = 0 + pipeHeight*row;
         pipeView.frame = CGRectMake(x, y, pipeWidth, pipeHeight);
+        if ([self viewForRow:row column:col] == nil) {
+          [self addSubview:pipeView];
+          [self setView:pipeView forRow:row column:col];
+        }
       }
     }
   }
@@ -65,7 +83,7 @@
 
 - (void)dealloc;
 {
-    [super dealloc];
+  [super dealloc];
 }
 
 @end
