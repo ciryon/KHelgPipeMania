@@ -12,6 +12,9 @@
 @interface CWGridViewController()
 
 -(void)didStartWaterWithNotification:(NSNotification*)notification;
+-(void)didEndGameWithNotification:(NSNotification*)notification;
+
+
 -(void)startTimer;
 -(void)timerUpdate;
 @end
@@ -23,6 +26,7 @@
 @synthesize pipeQueue;
 @synthesize timerLabel;
 @synthesize startDate;
+@synthesize timer;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,6 +59,8 @@
   [self.view addGestureRecognizer:self.tapGestureRecognizer];
   
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStartWaterWithNotification:) name:@"CWDidStartWater" object:nil];
+  
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didEndGameWithNotification:) name:@"CWDidEndGame" object:nil];
   
   [self startTimer];
 }
@@ -122,12 +128,20 @@
   NSLog(@"Got message that water is awayyyy");
 }
 
+-(void)didEndGameWithNotification:(NSNotification*)notification;
+{
+  [self.timer invalidate];
+  self.timer = nil;
+  NSLog(@"Did end game");
+}
+
 #pragma mark Score label
 -(void)startTimer;
 {
   self.startDate = [NSDate date];
 
-  [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
+  
+  self.timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerUpdate) userInfo:nil repeats:YES];
   
 }
 

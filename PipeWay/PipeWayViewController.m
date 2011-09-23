@@ -55,6 +55,10 @@
   NSDate *date = [NSDate date];
   NSNotification *notification = [NSNotification notificationWithName:@"CWDidStartWater" object:date];
   [[NSNotificationCenter defaultCenter] postNotification:notification];
+  
+  NSNotification *endNotification = [NSNotification notificationWithName:@"CWDidEndGame" object:date];
+  [[NSNotificationCenter defaultCenter] postNotification:endNotification];
+  
 }
 
 
