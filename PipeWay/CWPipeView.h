@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CWPipe.h"
 
 @interface CWPipeView : UIView {
     
 }
+
+-(id)initWithType:(CWPipeType)pipeType;
 
 @end

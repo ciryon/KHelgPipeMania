@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+  CWPipeTypeVertical = 0,     // |
+  CWPipeTypeHorizontal = 1,   // -
+  CWPipeTypeWestNorth = 2,    // _|
+  CWPipeTypeNorthEast = 3     // |_
+  } CWPipeType;
+
+
 @interface CWPipe : NSObject
 
 @end

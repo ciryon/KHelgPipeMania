@@ -11,13 +11,16 @@
 
 @implementation CWPipeView
 
-- (id)initWithFrame:(CGRect)frame
+
+
+-(id)initWithType:(CWPipeType)pipeType;
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+  CGRect defaultFrame = CGRectMake(0, 0, 64.0, 64.0); // TODO: Dynamic size
+  self = [super initWithFrame:defaultFrame];
+  if (self) {
+    // TODO
+  }
+  return self;
 }
 
 /*
