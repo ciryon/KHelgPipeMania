@@ -19,7 +19,11 @@
 @property(nonatomic, retain) UIGestureRecognizer* tapGestureRecognizer;
 @property (nonatomic, assign) id<CWGridDataSource> datasource;
 @property (nonatomic, assign) id<CWGridViewDelegate> delegate;
+@property(nonatomic, retain) NSMutableArray *rowArray;
+
+
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer;
+-(UIView*)viewForRow:(NSUInteger)row column:(NSUInteger)column;
 
 @end
 
@@ -28,6 +32,7 @@
 - (CWPipeView*) gridView:(CWGridView*) view viewForCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
 
 -(void) gridView:(CWGridView*) view didTapCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
+
 
 
 @end

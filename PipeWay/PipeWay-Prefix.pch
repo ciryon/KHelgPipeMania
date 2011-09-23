@@ -12,3 +12,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define kNumberOfRows 10
+#define kNumberOfColumns 15

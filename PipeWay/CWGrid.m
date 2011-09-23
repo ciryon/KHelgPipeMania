@@ -8,8 +8,6 @@
 
 #import "CWGrid.h"
 
-#define kNumberOfRows 10
-#define kNumberOfColumns 15
 
 @implementation CWGrid
 
