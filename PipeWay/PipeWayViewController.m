@@ -20,15 +20,15 @@
 
 - (void)dealloc
 {
-    [super dealloc];
+  [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+  // Releases the view if it doesn't have a superview.
+  [super didReceiveMemoryWarning];
+  
+  // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -37,35 +37,38 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
   
-
+  
   
   [NSTimer scheduledTimerWithTimeInterval:8.0
                                    target:self
                                  selector:@selector(startWater)
                                  userInfo:nil
                                   repeats:NO];
-
+  
 }
 
 -(void)startWater;
 {
- NSLog(@"STARTING WATER!!!!!"); 
+  NSLog(@"STARTING WATER!!!!!");
+  NSDate *date = [NSDate date];
+  NSNotification *notification = [NSNotification notificationWithName:@"CWDidStartWater" object:date];
+  [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
 
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+  [super viewDidUnload];
+  // Release any retained subviews of the main view.
+  // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return YES;
+  // Return YES for supported orientations
+  return YES;
 }
 
 @end

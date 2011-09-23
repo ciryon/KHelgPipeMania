@@ -9,6 +9,13 @@
 #import "CWGridViewController.h"
 
 
+@interface CWGridViewController()
+
+-(void)didStartWaterWithNotification:(NSNotification*)notification;
+
+@end
+
+
 @implementation CWGridViewController
 
 @synthesize tapGestureRecognizer;
@@ -43,6 +50,8 @@
   
   self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self.view action:@selector(handleGesture:)];
   [self.view addGestureRecognizer:self.tapGestureRecognizer];
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didStartWaterWithNotification:) name:@"CWDidStartWater" object:nil];
 }
 
 - (void)viewDidUnload
@@ -101,6 +110,13 @@
   //Add new pipeview to gridview
   
   
+}
+
+#pragma mark Water
+
+-(void)didStartWaterWithNotification:(NSNotification*)notification;
+{
+  NSLog(@"Got message that water is awayyyy");
 }
 
 @end
