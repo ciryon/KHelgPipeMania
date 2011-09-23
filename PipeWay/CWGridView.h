@@ -16,8 +16,8 @@
 @interface CWGridView : UIView {
 }
 
-@property (nonatomic, assign) IBOutlet id<CWGridDataSource> datasource;
-@property (nonatomic, assign) IBOutlet id<CWGridViewDelegate> delegate;
+@property (nonatomic, retain) IBOutlet id<CWGridDataSource> datasource;
+@property (nonatomic, retain) IBOutlet id<CWGridViewDelegate> delegate;
 @property(nonatomic, retain) NSMutableArray *rowArray;
 
 

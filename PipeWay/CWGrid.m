@@ -63,7 +63,7 @@ static CWGrid *_grid;
   //CWPipe *oldPipe = [self pipeForRow:row column:column];
   NSMutableArray *columnArray = [self.rowArray objectAtIndex:row];
   if (columnArray!=nil) {
-    [columnArray insertObject:pipe atIndex:column];
+    [columnArray replaceObjectAtIndex:column withObject:pipe];
   }
   else {
     
