@@ -6,7 +6,15 @@
 //  Copyright 2011 Jayway AB. All rights reserved.
 //
 
+#define kDefaultSeconds 5
+
 #import "PipeWayViewController.h"
+
+@interface PipeWayViewController()
+
+-(void)startWater;
+
+@end
 
 @implementation PipeWayViewController
 
@@ -25,13 +33,27 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
+
+  
+  [NSTimer scheduledTimerWithTimeInterval:8.0
+                                   target:self
+                                 selector:@selector(startWater)
+                                 userInfo:nil
+                                  repeats:NO];
+
 }
-*/
+
+-(void)startWater;
+{
+ NSLog(@"STARTING WATER!!!!!"); 
+}
+
 
 - (void)viewDidUnload
 {
