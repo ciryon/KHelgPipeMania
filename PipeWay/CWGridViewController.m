@@ -93,10 +93,7 @@
 -(void) gridView:(CWGridView*) view didTapCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
 {
   NSLog(@"Did tap at (%d,%d)",row,col);
-  CWPipeType pipeType = CWPipeTypeNorthWest; // TODO: Replace with the one from queue
-  
-  CWPipe* pipe = [[[CWPipe alloc] initWithType:pipeType] autorelease];
-  [[CWGrid standardGrid] setPipe:pipe forRow:row column:col  ];
+  [[CWGrid standardGrid] setPipe:[self.queueDelegate nextPipe] forRow:row column:col  ];
   [self.view setNeedsLayout];
   //Add new pipeview to gridview
   
