@@ -11,7 +11,7 @@
 #import "CWPipe.h"
 
 
-@protocol CWGridDataSource;
+
 
 @interface CWGrid : NSObject
 
@@ -19,13 +19,12 @@
 
 +(CWGrid*)standardGrid;
 
-
-@end
-
-@protocol CWGridDataSource<NSObject>;
-
 -(CWPipe*)setPipe:(CWPipe*)pipe forRow:(NSUInteger)row column:(NSUInteger)column;
 -(CWPipe*)pipeForRow:(NSUInteger)row column:(NSUInteger)column;
 -(NSUInteger)numberOfPipes;
+-(NSUInteger)numberOfRows;
+-(NSUInteger)numberOfColumns;
 
 @end
+
+

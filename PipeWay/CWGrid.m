@@ -46,7 +46,15 @@ static CWGrid *_grid;
   return oldPipe;
 }
 
+-(NSUInteger)numberOfRows;
+{
+  return kNumberOfRows;
+}
 
+-(NSUInteger)numberOfColumns;
+{
+  return kNumberOfColumns;
+}
 
 -(NSUInteger)numberOfPipes;
 {
