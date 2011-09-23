@@ -6,10 +6,10 @@
 //  Copyright 2011 Jayway AB. All rights reserved.
 //
 
-#import "UIPipeView.h"
+#import "CWPipeView.h"
 
 
-@implementation UIPipeView
+@implementation CWPipeView
 
 - (id)initWithFrame:(CGRect)frame
 {
