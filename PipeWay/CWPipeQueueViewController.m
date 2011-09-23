@@ -9,6 +9,8 @@
 #import "CWPipeQueueViewController.h"
 
 @implementation CWPipeQueueViewController
+@synthesize pipes;
+@synthesize pipeViews;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,5 +50,30 @@
     // Return YES for supported orientations
 	return YES;
 }
+- (CWPipeView*)pipeQueueView:(CWPipeQueueView*)view pipeForIndex:(NSUInteger)index;
+{
+    return [self.pipeViews objectAtIndex:index]; 
+}
 
+- (NSUInteger)numberOfItemsInQueue:(CWPipeQueueView*)view;
+{
+    return 5;
+}
+-(CWPipe*)getRandomPipe;
+{
+    NSUInteger randomInt = random()%7;
+    
+    return [[[CWPipe alloc] initWithType:randomInt] autorelease];
+}
+-(CWPipe*) popPipe;
+{
+    [self.pipeViews removeLastObject];
+    CWPipe* pipeToReturn = [self.pipes lastObject];
+    [self.pipes removeLastObject];
+    CWPipe* newPipe = [self getRandomPipe];
+    CWPipeView* newView = [[[CWPipeView alloc] initWithType:newPipe.type] autorelease];
+    [self.pipes addObject:newPipe];
+    [self.pipeViews addObject:newView];
+    return pipeToReturn;
+}
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface CWPipeQueueViewController : UIViewController
-
+#import "CWPipeQueueView.h"
+@interface CWPipeQueueViewController : UIViewController <CWPipeQueueDataSource>
+@property (nonatomic, retain) NSMutableArray* pipes;
+@property (nonatomic, retain) NSMutableArray* pipeViews;
+-(CWPipe*) popPipe;
+-(CWPipe*)getRandomPipe;
 @end
