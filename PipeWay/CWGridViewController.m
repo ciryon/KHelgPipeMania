@@ -86,7 +86,11 @@
 
 -(void) gridView:(CWGridView*) view didTapCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
 {
-  // TODO Handle tap
+    CWPipe* pipe = [[[CWPipe alloc] init] autorelease];
+    [[CWGrid standardGrid] setPipe:pipe forRow:row column:col  ];
+    //Add new pipeview to gridview
+    
+
 }
 
 @end
