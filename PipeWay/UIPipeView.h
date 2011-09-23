@@ -1,5 +1,5 @@
 //
-//  CWGridViewController.h
+//  UIPipeView.h
 //  PipeWay
 //
 //  Created by Ester Ytterbrink on 2011-09-23.
@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CWGrid.h"
 
-@interface CWGridViewController : UIViewController  {
 
+@interface UIPipeView : UIView {
+    
 }
 
 @end
