@@ -9,12 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "CWGrid.h"
 #import "CWGridView.h"
-
+@protocol CWPipeQueue;
 @interface CWGridViewController : UIViewController 
 <CWGridViewDelegate,CWGridDataSource>
 {
 
 }
 @property(nonatomic, retain) UIGestureRecognizer* tapGestureRecognizer;
+@property(nonatomic, retain) IBOutlet id<CWPipeQueue> pipeQueue;
+@end
+
+@protocol CWPipeQueue <NSObject>;
+
+    -(CWPipe*) popPipe;
 
 @end

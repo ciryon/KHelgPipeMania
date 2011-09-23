@@ -13,6 +13,7 @@
 
 @synthesize datasource;
 
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -23,6 +24,7 @@
 }
 -(void)layoutSubviews;
 {
+
     NSUInteger numberOfPipes = [self.datasource numberOfItemsInQueue:self];
     float width = self.frame.size.width;
     float height = self.frame.size.height;
