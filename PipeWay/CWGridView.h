@@ -14,9 +14,12 @@
 @protocol CWGridDataSource;
 
 @interface CWGridView : UIView {
-    id <CWGridViewDelegate> _delegate;
-    UIGestureRecognizer* _tapGestureRecognizer;
 }
+
+@property(nonatomic, retain) UIGestureRecognizer* tapGestureRecognizer;
+@property (nonatomic, assign) id<CWGridDataSource> datasource;
+@property (nonatomic, assign) id<CWGridViewDelegate> delegate;
+- (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer;
 
 @end
 
