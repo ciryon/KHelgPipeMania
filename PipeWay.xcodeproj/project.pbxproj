@@ -19,6 +19,7 @@
 		19F9A698142C750B00AC8466 /* CWGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9A696142C750B00AC8466 /* CWGridViewController.m */; };
 		19F9A6D6142C82D200AC8466 /* CWGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9A6D5142C82D200AC8466 /* CWGridView.m */; };
 		19F9A6DA142C928300AC8466 /* CWPipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9A6D9142C928300AC8466 /* CWPipeView.m */; };
+		19F9A6F1142CC04800AC8466 /* CWPipeQueueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9A6F0142CC04800AC8466 /* CWPipeQueueView.m */; };
 		B16F8EFB142C779400B33867 /* CWGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8EFA142C779400B33867 /* CWGrid.m */; };
 		B16F8EFE142C78F500B33867 /* CWPipe.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8EFD142C78F500B33867 /* CWPipe.m */; };
 		B16F8F02142C7DB900B33867 /* CWPipeQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8F00142C7DB900B33867 /* CWPipeQueueViewController.m */; };
@@ -53,6 +54,8 @@
 		19F9A6D5142C82D200AC8466 /* CWGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWGridView.m; sourceTree = "<group>"; };
 		19F9A6D8142C928300AC8466 /* CWPipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPipeView.h; sourceTree = "<group>"; };
 		19F9A6D9142C928300AC8466 /* CWPipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPipeView.m; sourceTree = "<group>"; };
+		19F9A6EF142CC04800AC8466 /* CWPipeQueueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPipeQueueView.h; sourceTree = "<group>"; };
+		19F9A6F0142CC04800AC8466 /* CWPipeQueueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPipeQueueView.m; sourceTree = "<group>"; };
 		B16F8EF9142C779400B33867 /* CWGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWGrid.h; sourceTree = "<group>"; };
 		B16F8EFA142C779400B33867 /* CWGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWGrid.m; sourceTree = "<group>"; };
 		B16F8EFC142C78F500B33867 /* CWPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPipe.h; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				19F9A6D5142C82D200AC8466 /* CWGridView.m */,
 				19F9A6D8142C928300AC8466 /* CWPipeView.h */,
 				19F9A6D9142C928300AC8466 /* CWPipeView.m */,
+				19F9A6EF142CC04800AC8466 /* CWPipeQueueView.h */,
+				19F9A6F0142CC04800AC8466 /* CWPipeQueueView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				B16F8F02142C7DB900B33867 /* CWPipeQueueViewController.m in Sources */,
 				19F9A6D6142C82D200AC8466 /* CWGridView.m in Sources */,
 				19F9A6DA142C928300AC8466 /* CWPipeView.m in Sources */,
+				19F9A6F1142CC04800AC8466 /* CWPipeQueueView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
