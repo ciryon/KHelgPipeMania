@@ -26,8 +26,12 @@
 {
   self.rowArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfRows];
   for (int i=0; i<=kNumberOfRows; i++) {
-    NSArray *columnArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfColumns];
+    NSMutableArray *columnArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfColumns];
     [self.rowArray insertObject:columnArray atIndex:i];
+    for (int j=0; j<=kNumberOfColumns; j++) {
+      NSObject *obj = [[NSObject alloc] init];
+      [columnArray insertObject:obj atIndex:j];
+    }
   }
 }
 
@@ -41,10 +45,10 @@
     [self.delegate gridView:self didTapCellAtRow:row inColumn:col];
 }
 
--(UIView*)viewForRow:(NSUInteger)row column:(NSUInteger)column;
+-(CWPipeView*)viewForRow:(NSUInteger)row column:(NSUInteger)column;
 {
   NSArray *columnArray = [self.rowArray objectAtIndex:row];
-  UIView *view = [columnArray objectAtIndex:column];
+  CWPipeView *view = [columnArray objectAtIndex:column];
   return view;
 }
 

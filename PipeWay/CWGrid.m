@@ -22,8 +22,12 @@ static CWGrid *_grid;
     _grid = [[CWGrid alloc] init];
     _grid.rowArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfRows];
     for (int i=0; i<=kNumberOfRows; i++) {
-      NSArray *columnArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfColumns];
+      NSMutableArray *columnArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfColumns];
       [_grid.rowArray insertObject:columnArray atIndex:i];
+      for (int j=0; j<=kNumberOfColumns; j++) {
+        NSObject *obj = [[NSObject alloc] init];
+        [columnArray insertObject:obj atIndex:j];
+      }
     }
     
     
@@ -37,16 +41,35 @@ static CWGrid *_grid;
 -(CWPipe*)pipeForRow:(NSUInteger)row column:(NSUInteger)column;
 {
   NSArray *columnArray = [self.rowArray objectAtIndex:row];
-  CWPipe *pipe = [columnArray objectAtIndex:column];
-  return pipe;
+  if (columnArray!=nil) {
+    CWPipe *pipe = [columnArray objectAtIndex:column];
+    if (pipe!=nil && [pipe isKindOfClass:[CWPipe class]]) {
+      return pipe;
+    }
+    else {
+      
+    }
+    return nil;
+  }
+  else {
+    return nil;
+  }
+  
+  
 }
 
 -(CWPipe*)setPipe:(CWPipe*)pipe forRow:(NSUInteger)row column:(NSUInteger)column;
 {
-  CWPipe *oldPipe = [self pipeForRow:row column:column];
+  //CWPipe *oldPipe = [self pipeForRow:row column:column];
   NSMutableArray *columnArray = [self.rowArray objectAtIndex:row];
-  [columnArray insertObject:pipe atIndex:column];
-  return oldPipe;
+  if (columnArray!=nil) {
+    [columnArray insertObject:pipe atIndex:column];
+  }
+  else {
+    
+  }
+  
+  return nil;
 }
 
 -(NSUInteger)numberOfRows;
@@ -64,7 +87,7 @@ static CWGrid *_grid;
   int counter = 0;
   for (NSArray *columnArray in self.rowArray) {
     for (CWPipe *pipe in columnArray) {
-      if (pipe!=nil) {
+      if (pipe!=nil && [pipe isKindOfClass:[UIView class]]) {
         counter++;
       }
     }

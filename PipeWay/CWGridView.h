@@ -16,13 +16,13 @@
 @interface CWGridView : UIView {
 }
 
-@property (nonatomic, assign) id<CWGridDataSource> datasource;
-@property (nonatomic, assign) id<CWGridViewDelegate> delegate;
+@property (nonatomic, assign) IBOutlet id<CWGridDataSource> datasource;
+@property (nonatomic, assign) IBOutlet id<CWGridViewDelegate> delegate;
 @property(nonatomic, retain) NSMutableArray *rowArray;
 
 
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer;
--(UIView*)viewForRow:(NSUInteger)row column:(NSUInteger)column;
+-(CWPipeView*)viewForRow:(NSUInteger)row column:(NSUInteger)column;
 
 @end
 

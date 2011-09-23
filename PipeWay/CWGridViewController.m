@@ -78,10 +78,16 @@
 
 #pragma mark Delegate methods
 
-- (CWPipeView*) gridView:(CWGridView*) view viewForCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
+- (CWPipeView*) gridView:(CWGridView*)view viewForCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
 {
-  
-  return nil;
+  CWPipeView *pipeView = [view viewForRow:row column:col];
+  CWPipe *pipe = [[CWGrid standardGrid] pipeForRow:row column:col];
+  if (pipeView==nil && pipe!=nil) {
+    pipeView = [[CWPipeView alloc] init];
+    pipeView.backgroundColor = [UIColor yellowColor];
+    // TODO: Set pipeview depending on pipe (image etc)
+  }
+  return pipeView;
 }
 
 -(void) gridView:(CWGridView*) view didTapCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
