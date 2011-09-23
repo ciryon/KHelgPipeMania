@@ -7,7 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "CWPipe.h"
+
+
+@protocol CWGridDataSource;
 
 @interface CWGrid : NSObject
+
+@property(nonatomic, retain) NSMutableArray *rowArray;
+
++(CWGrid*)standardGrid;
+
+
+@end
+
+@protocol CWGridDataSource<NSObject>;
+
+-(CWPipe*)setPipe:(CWPipe*)pipe forRow:(NSUInteger)row column:(NSUInteger)column;
+-(CWPipe*)pipeForRow:(NSUInteger)row column:(NSUInteger)column;
+-(NSUInteger)numberOfPipes;
 
 @end

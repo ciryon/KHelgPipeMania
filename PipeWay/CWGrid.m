@@ -8,6 +8,57 @@
 
 #import "CWGrid.h"
 
+#define kNumberOfRows 10
+#define kNumberOfColumns 15
+
 @implementation CWGrid
+
+@synthesize rowArray = _rowArray;
+
+
+static CWGrid *_grid;
+
++(CWGrid*)standardGrid;
+{
+  if(_grid==nil) {
+    _grid = [[CWGrid alloc] init];
+    _grid.rowArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfRows];
+    for (int i=0; i<=kNumberOfRows; i++) {
+      NSArray *columnArray = [[NSMutableArray alloc] initWithCapacity:kNumberOfColumns];
+      [_grid.rowArray insertObject:columnArray atIndex:i];
+    }
+  }
+  return _grid;
+}
+
+-(CWPipe*)pipeForRow:(NSUInteger)row column:(NSUInteger)column;
+{
+  NSArray *columnArray = [self.rowArray objectAtIndex:row];
+  CWPipe *pipe = [columnArray objectAtIndex:column];
+  return pipe;
+}
+
+-(CWPipe*)setPipe:(CWPipe*)pipe forRow:(NSUInteger)row column:(NSUInteger)column;
+{
+  CWPipe *oldPipe = [self pipeForRow:row column:column];
+  NSMutableArray *columnArray = [self.rowArray objectAtIndex:row];
+  [columnArray insertObject:pipe atIndex:column];
+  return oldPipe;
+}
+
+
+
+-(NSUInteger)numberOfPipes;
+{
+  int counter = 0;
+  for (NSArray *columnArray in self.rowArray) {
+    for (CWPipe *pipe in columnArray) {
+      if (pipe!=nil) {
+        counter++;
+      }
+    }
+  }
+  return counter;
+}
 
 @end
