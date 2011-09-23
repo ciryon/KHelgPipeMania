@@ -16,6 +16,8 @@
 		19F9A685142C715A00AC8466 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F9A683142C715A00AC8466 /* MainWindow.xib */; };
 		19F9A688142C715A00AC8466 /* PipeWayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9A687142C715A00AC8466 /* PipeWayViewController.m */; };
 		19F9A68B142C715A00AC8466 /* PipeWayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F9A689142C715A00AC8466 /* PipeWayViewController.xib */; };
+		19F9A698142C750B00AC8466 /* CWGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F9A696142C750B00AC8466 /* CWGridViewController.m */; };
+		19F9A699142C750B00AC8466 /* CWGridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19F9A697142C750B00AC8466 /* CWGridViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,9 @@
 		19F9A686142C715A00AC8466 /* PipeWayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipeWayViewController.h; sourceTree = "<group>"; };
 		19F9A687142C715A00AC8466 /* PipeWayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PipeWayViewController.m; sourceTree = "<group>"; };
 		19F9A68A142C715A00AC8466 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PipeWayViewController.xib; sourceTree = "<group>"; };
+		19F9A695142C750B00AC8466 /* CWGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWGridViewController.h; sourceTree = "<group>"; };
+		19F9A696142C750B00AC8466 /* CWGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWGridViewController.m; sourceTree = "<group>"; };
+		19F9A697142C750B00AC8466 /* CWGridViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWGridViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,9 @@
 				19F9A687142C715A00AC8466 /* PipeWayViewController.m */,
 				19F9A689142C715A00AC8466 /* PipeWayViewController.xib */,
 				19F9A678142C715A00AC8466 /* Supporting Files */,
+				19F9A695142C750B00AC8466 /* CWGridViewController.h */,
+				19F9A696142C750B00AC8466 /* CWGridViewController.m */,
+				19F9A697142C750B00AC8466 /* CWGridViewController.xib */,
 			);
 			path = PipeWay;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 				19F9A67C142C715A00AC8466 /* InfoPlist.strings in Resources */,
 				19F9A685142C715A00AC8466 /* MainWindow.xib in Resources */,
 				19F9A68B142C715A00AC8466 /* PipeWayViewController.xib in Resources */,
+				19F9A699142C750B00AC8466 /* CWGridViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +176,7 @@
 				19F9A67F142C715A00AC8466 /* main.m in Sources */,
 				19F9A682142C715A00AC8466 /* PipeWayAppDelegate.m in Sources */,
 				19F9A688142C715A00AC8466 /* PipeWayViewController.m in Sources */,
+				19F9A698142C750B00AC8466 /* CWGridViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +291,7 @@
 				19F9A690142C715A00AC8466 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
