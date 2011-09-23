@@ -32,7 +32,7 @@ static CWGrid *_grid;
     
     
     // Temp insert one
-    CWPipe *pipe = [[CWPipe alloc] init];
+    CWPipe *pipe = [[CWPipe alloc] initWithType:CWPipeTypeNorthEast];
     [_grid setPipe:pipe forRow:5 column:5];
   }
   return _grid;

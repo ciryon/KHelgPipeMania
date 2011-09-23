@@ -13,9 +13,9 @@ typedef enum {
   CWPipeTypeHorizontal = 1,   // -
   CWPipeTypeNorthWest = 2,    // _|
   CWPipeTypeNorthEast = 3,    // |_
-    CWPipeTypeSouthWest = 4,
-    CWPipeTypeSouthEast = 5, 
-    CWPipeTypeCross = 6
+  CWPipeTypeSouthWest = 4,
+  CWPipeTypeSouthEast = 5, 
+  CWPipeTypeCross = 6
   } CWPipeType;
 
 

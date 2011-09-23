@@ -16,44 +16,45 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-           }
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+  }
+  return self;
 }
 
 - (void)dealloc
 {
-    [super dealloc];
+  [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
+  // Releases the view if it doesn't have a superview.
+  [super didReceiveMemoryWarning];
+  
+  // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
 - (void)viewDidLoad;
 {
-    [super viewDidLoad];
-
-    self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self.view action:@selector(handleGesture:)];
-    [self.view addGestureRecognizer:self.tapGestureRecognizer];
+  [super viewDidLoad];
+  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"grid_background"]];
+  
+  self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self.view action:@selector(handleGesture:)];
+  [self.view addGestureRecognizer:self.tapGestureRecognizer];
 }
 
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+  [super viewDidUnload];
+  // Release any retained subviews of the main view.
+  // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
+  // Return YES for supported orientations
 	return YES;
 }
 
@@ -83,8 +84,7 @@
   CWPipeView *pipeView = [view viewForRow:row column:col];
   CWPipe *pipe = [[CWGrid standardGrid] pipeForRow:row column:col];
   if (pipeView==nil && pipe!=nil) {
-    pipeView = [[CWPipeView alloc] init];
-    pipeView.backgroundColor = [UIColor yellowColor];
+    pipeView = [[CWPipeView alloc] initWithType:pipe.type];
     // TODO: Set pipeview depending on pipe (image etc)
   }
   return pipeView;
@@ -93,12 +93,14 @@
 -(void) gridView:(CWGridView*) view didTapCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
 {
   NSLog(@"Did tap at (%d,%d)",row,col);
-    CWPipe* pipe = [[[CWPipe alloc] init] autorelease];
-    [[CWGrid standardGrid] setPipe:pipe forRow:row column:col  ];
+  CWPipeType pipeType = CWPipeTypeNorthWest; // TODO: Replace with the one from queue
+  
+  CWPipe* pipe = [[[CWPipe alloc] initWithType:pipeType] autorelease];
+  [[CWGrid standardGrid] setPipe:pipe forRow:row column:col  ];
   [self.view setNeedsLayout];
-    //Add new pipeview to gridview
-    
-
+  //Add new pipeview to gridview
+  
+  
 }
 
 @end

@@ -22,6 +22,14 @@
 		B16F8EFB142C779400B33867 /* CWGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8EFA142C779400B33867 /* CWGrid.m */; };
 		B16F8EFE142C78F500B33867 /* CWPipe.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8EFD142C78F500B33867 /* CWPipe.m */; };
 		B16F8F02142C7DB900B33867 /* CWPipeQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8F00142C7DB900B33867 /* CWPipeQueueViewController.m */; };
+		B16F8F15142CC27400B33867 /* pipe_horizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F0E142CC27400B33867 /* pipe_horizontal.png */; };
+		B16F8F16142CC27400B33867 /* pipe_north_east.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F0F142CC27400B33867 /* pipe_north_east.png */; };
+		B16F8F17142CC27400B33867 /* pipe_plus.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F10142CC27400B33867 /* pipe_plus.png */; };
+		B16F8F18142CC27400B33867 /* pipe_south_east.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F11142CC27400B33867 /* pipe_south_east.png */; };
+		B16F8F19142CC27400B33867 /* pipe_vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F12142CC27400B33867 /* pipe_vertical.png */; };
+		B16F8F1A142CC27400B33867 /* pipe_west_north.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F13142CC27400B33867 /* pipe_west_north.png */; };
+		B16F8F1B142CC27400B33867 /* pipe_west_south.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F14142CC27400B33867 /* pipe_west_south.png */; };
+		B16F8F1D142CC5F100B33867 /* grid_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F1C142CC5F100B33867 /* grid_background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +59,14 @@
 		B16F8EFD142C78F500B33867 /* CWPipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPipe.m; sourceTree = "<group>"; };
 		B16F8EFF142C7DB900B33867 /* CWPipeQueueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPipeQueueViewController.h; sourceTree = "<group>"; };
 		B16F8F00142C7DB900B33867 /* CWPipeQueueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPipeQueueViewController.m; sourceTree = "<group>"; };
+		B16F8F0E142CC27400B33867 /* pipe_horizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_horizontal.png; sourceTree = "<group>"; };
+		B16F8F0F142CC27400B33867 /* pipe_north_east.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_north_east.png; sourceTree = "<group>"; };
+		B16F8F10142CC27400B33867 /* pipe_plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_plus.png; sourceTree = "<group>"; };
+		B16F8F11142CC27400B33867 /* pipe_south_east.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_south_east.png; sourceTree = "<group>"; };
+		B16F8F12142CC27400B33867 /* pipe_vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_vertical.png; sourceTree = "<group>"; };
+		B16F8F13142CC27400B33867 /* pipe_west_north.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_west_north.png; sourceTree = "<group>"; };
+		B16F8F14142CC27400B33867 /* pipe_west_south.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_west_south.png; sourceTree = "<group>"; };
+		B16F8F1C142CC5F100B33867 /* grid_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid_background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +124,7 @@
 		19F9A678142C715A00AC8466 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B16F8F0D142CC27400B33867 /* images */,
 				19F9A680142C715A00AC8466 /* PipeWayAppDelegate.h */,
 				19F9A681142C715A00AC8466 /* PipeWayAppDelegate.m */,
 				19F9A679142C715A00AC8466 /* PipeWay-Info.plist */,
@@ -154,6 +171,22 @@
 			);
 			name = Controller;
 			sourceTree = "<group>";
+		};
+		B16F8F0D142CC27400B33867 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				B16F8F1C142CC5F100B33867 /* grid_background.png */,
+				B16F8F0E142CC27400B33867 /* pipe_horizontal.png */,
+				B16F8F0F142CC27400B33867 /* pipe_north_east.png */,
+				B16F8F10142CC27400B33867 /* pipe_plus.png */,
+				B16F8F11142CC27400B33867 /* pipe_south_east.png */,
+				B16F8F12142CC27400B33867 /* pipe_vertical.png */,
+				B16F8F13142CC27400B33867 /* pipe_west_north.png */,
+				B16F8F14142CC27400B33867 /* pipe_west_south.png */,
+			);
+			name = images;
+			path = Resources/images;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -209,6 +242,14 @@
 				19F9A67C142C715A00AC8466 /* InfoPlist.strings in Resources */,
 				19F9A685142C715A00AC8466 /* MainWindow.xib in Resources */,
 				19F9A68B142C715A00AC8466 /* PipeWayViewController.xib in Resources */,
+				B16F8F15142CC27400B33867 /* pipe_horizontal.png in Resources */,
+				B16F8F16142CC27400B33867 /* pipe_north_east.png in Resources */,
+				B16F8F17142CC27400B33867 /* pipe_plus.png in Resources */,
+				B16F8F18142CC27400B33867 /* pipe_south_east.png in Resources */,
+				B16F8F19142CC27400B33867 /* pipe_vertical.png in Resources */,
+				B16F8F1A142CC27400B33867 /* pipe_west_north.png in Resources */,
+				B16F8F1B142CC27400B33867 /* pipe_west_south.png in Resources */,
+				B16F8F1D142CC5F100B33867 /* grid_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
