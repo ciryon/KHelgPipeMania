@@ -10,7 +10,8 @@
 
 @interface CWGridView()
 
-
+-(NSUInteger)columnForXCoordinate:(CGFloat)x;
+-(NSUInteger)rowForYCoordinate:(CGFloat)y;
 
 @end
 
@@ -37,12 +38,10 @@
 
 - (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer;
 {
-    CGPoint point  = [gestureRecognizer locationInView:self];
-   NSUInteger cols =  [self.datasource numberOfColumnsForGridView:self];
-    NSUInteger rows = [self.datasource numberOfRowsForGridView:self];
-    NSUInteger col = floor(point.x/(self.frame.size.width/cols));
-    NSUInteger row = floor(point.y/(self.frame.size.height/rows));
-    [self.delegate gridView:self didTapCellAtRow:row inColumn:col];
+  CGPoint point  = [gestureRecognizer locationInView:self];
+  NSUInteger row = [self rowForYCoordinate:point.y];
+  NSUInteger col = [self columnForXCoordinate:point.x];  
+  [self.delegate gridView:self didTapCellAtRow:row inColumn:col];
 }
 
 -(CWPipeView*)viewForRow:(NSUInteger)row column:(NSUInteger)column;
@@ -77,8 +76,6 @@
         pipeView.frame = CGRectMake(x, y, pipeWidth, pipeHeight);
         if ([self viewForRow:row column:col] == nil) {
           [self addSubview:pipeView];
-
-          
           [self setView:pipeView forRow:row column:col];
         }
       }
@@ -90,6 +87,23 @@
 - (void)dealloc;
 {
   [super dealloc];
+}
+
+
+#pragma mark Help methods
+
+-(NSUInteger)columnForXCoordinate:(CGFloat)x;
+{
+  NSUInteger cols =  [self.datasource numberOfColumnsForGridView:self];
+  NSUInteger col = floor(x/(self.frame.size.width/cols));
+  return col;
+}
+
+-(NSUInteger)rowForYCoordinate:(CGFloat)y;
+{
+  NSUInteger rows = [self.datasource numberOfRowsForGridView:self];
+  NSUInteger row = floor(y/(self.frame.size.height/rows));
+  return row;
 }
 
 @end
