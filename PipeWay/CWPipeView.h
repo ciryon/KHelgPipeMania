@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CWPipe.h"
+
 
 @interface CWPipeView : UIView {
     
 }
 
--(id)initWithType:(CWPipeType)pipeType;
+-(id)init;
+
+@property(nonatomic, retain) UIImageView *imageView;
 
 @end

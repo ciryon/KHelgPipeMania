@@ -20,7 +20,11 @@ typedef enum {
 
 
 @interface CWPipe : NSObject
+
 -(id)initWithType:(CWPipeType) type;
+-(NSString*)fileNameImage;
+
 @property (nonatomic, assign) CWPipeType type;
+
 
 @end

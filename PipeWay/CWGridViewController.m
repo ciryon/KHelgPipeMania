@@ -104,8 +104,9 @@
   CWPipeView *pipeView = [view viewForRow:row column:col];
   CWPipe *pipe = [[CWGrid standardGrid] pipeForRow:row column:col];
   if (pipeView==nil && pipe!=nil) {
-    pipeView = [[CWPipeView alloc] initWithType:pipe.type];
-    // TODO: Set pipeview depending on pipe (image etc)
+    pipeView = [[CWPipeView alloc] init];
+    pipeView.imageView.image = [UIImage imageNamed:[pipe fileNameImage]];
+    [pipeView.imageView setNeedsLayout];
   }
   return pipeView;
 }
