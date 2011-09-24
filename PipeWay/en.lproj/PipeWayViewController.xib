@@ -46,7 +46,7 @@
 						<string key="NSFrame">{{159, 20}, {845, 600}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="478184280"/>
+						<reference key="NSNextKeyView" ref="673129628"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xNjgzNjczNDY5IDAuMTY4MzY3MzQ2OSAwLjE2ODM2NzM0NjkAA</bytes>
@@ -66,13 +66,12 @@
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 					</object>
-					<object class="IBUILabel" id="478184280">
+					<object class="IBUILabel" id="673129628">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{723, 699}, {281, 29}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:121</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -10003,19 +10002,19 @@ AAEAAQABA</bytes>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">pipeQueue</string>
+						<string key="label">timerLabel</string>
 						<reference key="source" ref="185241924"/>
-						<reference key="destination" ref="22800451"/>
+						<reference key="destination" ref="673129628"/>
 					</object>
-					<int key="connectionID">18</int>
+					<int key="connectionID">20</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">timerLabel</string>
+						<string key="label">pipeRandomizer</string>
 						<reference key="source" ref="185241924"/>
-						<reference key="destination" ref="478184280"/>
+						<reference key="destination" ref="22800451"/>
 					</object>
-					<int key="connectionID">20</int>
+					<int key="connectionID">21</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -10078,7 +10077,7 @@ AAEAAQABA</bytes>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="520584707"/>
-							<reference ref="478184280"/>
+							<reference ref="673129628"/>
 							<reference ref="207071103"/>
 						</object>
 						<reference key="parent" ref="0"/>
@@ -10108,7 +10107,7 @@ AAEAAQABA</bytes>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
-						<reference key="object" ref="478184280"/>
+						<reference key="object" ref="673129628"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</object>
@@ -10162,7 +10161,7 @@ AAEAAQABA</bytes>
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">20</int>
+			<int key="maxID">21</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -10214,7 +10213,7 @@ AAEAAQABA</bytes>
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>pipeQueue</string>
+							<string>pipeRandomizer</string>
 							<string>timerLabel</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -10227,13 +10226,13 @@ AAEAAQABA</bytes>
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>pipeQueue</string>
+							<string>pipeRandomizer</string>
 							<string>timerLabel</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBToOneOutletInfo">
-								<string key="name">pipeQueue</string>
+								<string key="name">pipeRandomizer</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBToOneOutletInfo">

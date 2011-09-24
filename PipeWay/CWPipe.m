@@ -26,7 +26,7 @@
   
   switch (self.type) {
     case CWPipeTypeCross:
-      imageName = @"pipe_cross";
+      imageName = @"pipe_plus";
       break;
     case CWPipeTypeHorizontal:
       imageName = @"pipe_horizontal";
@@ -47,6 +47,7 @@
       imageName = @"pipe_west_south";
       break;
     default:
+      imageName = @"placeholder";
       break;
   }
   return imageName;

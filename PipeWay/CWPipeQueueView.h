@@ -15,10 +15,12 @@
 }
 @property(nonatomic, retain) IBOutlet id<CWPipeQueueDataSource> datasource;
 
+
 @end
 @protocol CWPipeQueueDataSource<NSObject>;
 
 - (CWPipeView*)pipeQueueView:(CWPipeQueueView*)view pipeForIndex:(NSUInteger)index;
 
-- (NSUInteger)numberOfItemsInQueue:(CWPipeQueueView*)view;
+- (NSUInteger)numberOfItemsInQueueForPipeQueueView:(CWPipeQueueView*)view;
+
 @end

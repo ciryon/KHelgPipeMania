@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "CWGrid.h"
 #import "CWGridView.h"
-@protocol CWPipeQueue;
+#import "CWPipe.h"
+
+@protocol CWPipeRandomizer;
+
 @interface CWGridViewController : UIViewController 
 <CWGridViewDelegate,CWGridDataSource>
 {
@@ -20,12 +23,14 @@
 @property(nonatomic, retain) NSDate *startDate;
 @property(nonatomic,retain) NSTimer *timer;
 
-@property(nonatomic, retain) UIGestureRecognizer* tapGestureRecognizer;
-@property(nonatomic, retain) IBOutlet id<CWPipeQueue> pipeQueue;
+@property(nonatomic, retain) UIGestureRecognizer *tapGestureRecognizer;
+@property(nonatomic, retain) IBOutlet id<CWPipeRandomizer> pipeRandomizer;
+
 @end
 
-@protocol CWPipeQueue <NSObject>;
 
-    -(CWPipe*) popPipe;
+@protocol CWPipeRandomizer
+
+-(CWPipe*) popPipeForGridViewController:(CWGridViewController*)controller;
 
 @end

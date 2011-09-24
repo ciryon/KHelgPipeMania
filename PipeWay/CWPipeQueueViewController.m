@@ -7,19 +7,11 @@
 //
 
 #import "CWPipeQueueViewController.h"
+#import "CWPipeQueue.h"
 
 @implementation CWPipeQueueViewController
-@synthesize pipes;
-@synthesize pipeViews;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
-    
-  }
-  return self;
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -35,20 +27,6 @@
 {
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
-  int numberOfItems = 5;
-  self.pipes = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
-  self.pipeViews = [[NSMutableArray alloc] initWithCapacity:numberOfItems];
-  
-  for (int i=0; i<numberOfItems; i++) {
-    // Populate with 5 first pipes
-    CWPipe *pipe = [self getRandomPipe];
-    [self.pipes addObject:pipe];
-    
-    // Populate with 5 first pipe views
-    CWPipeView *pipeView = [[CWPipeView alloc] init];
-    pipeView.imageView.image = [UIImage imageNamed:[pipe fileNameImage]];
-    [self.pipeViews addObject:pipeView];
-  }
 }
 
 - (void)viewDidUnload
@@ -61,32 +39,36 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
   // Return YES for supported orientations
-	return YES;
-}
-- (CWPipeView*)pipeQueueView:(CWPipeQueueView*)view pipeForIndex:(NSUInteger)index;
-{
-  return [self.pipeViews objectAtIndex:index]; 
+	return interfaceOrientation==UIInterfaceOrientationPortrait;
 }
 
-- (NSUInteger)numberOfItemsInQueue:(CWPipeQueueView*)view;
+
+- (CWPipeView*)pipeQueueView:(CWPipeQueueView*)view pipeForIndex:(NSUInteger)index;
 {
-  return [self.pipes count];
+  CWPipe *pipe = [[[CWPipeQueue standardQueue] pipes] objectAtIndex:index];
+  CWPipeView *pipeView = [[CWPipeView alloc] init];
+  pipeView.imageView.image = [UIImage imageNamed:[pipe fileNameImage]];
+  if (index!=0) {
+    // Indicate that the first pipe is the next pipe to be had
+    [pipeView setAlpha:0.5];
+  }
+  NSLog(@"Providing pipe of type %d to view",pipe.type);
+  return [pipeView autorelease];
 }
--(CWPipe*)getRandomPipe;
+
+#pragma mark Protocol conformance
+
+- (NSUInteger)numberOfItemsInQueueForPipeQueueView:(CWPipeQueueView*)view;
 {
-  NSUInteger randomInt = random()%7;
-  
-  return [[[CWPipe alloc] initWithType:randomInt] autorelease];
+  return [[CWPipeQueue standardQueue] numberOfPipes];
 }
--(CWPipe*) popPipe;
+
+-(CWPipe*) popPipeForGridViewController:(CWGridViewController*)controller;
 {
-  [self.pipeViews removeLastObject];
-  CWPipe* pipeToReturn = [self.pipes lastObject];
-  [self.pipes removeLastObject];
-  CWPipe* newPipe = [self getRandomPipe];
-  CWPipeView* newView = [[[CWPipeView alloc] initWithType:newPipe.type] autorelease];
-  [self.pipes addObject:newPipe];
-  [self.pipeViews addObject:newView];
-  return pipeToReturn;
+  CWPipe *pipe = [[CWPipeQueue standardQueue] popPipe];
+  [self.view setNeedsLayout];
+  return pipe;
 }
+
+
 @end

@@ -32,6 +32,8 @@
 		B16F8F1B142CC27400B33867 /* pipe_west_south.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F14142CC27400B33867 /* pipe_west_south.png */; };
 		B16F8F1D142CC5F100B33867 /* grid_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F1C142CC5F100B33867 /* grid_background.png */; };
 		B16F8F24142DE26900B33867 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F23142DE26900B33867 /* placeholder.png */; };
+		B16F8F27142DE48A00B33867 /* NSMutableArray+CWQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8F26142DE48A00B33867 /* NSMutableArray+CWQueue.m */; };
+		B16F8F2A142DE76B00B33867 /* CWPipeQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8F29142DE76A00B33867 /* CWPipeQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,10 @@
 		B16F8F14142CC27400B33867 /* pipe_west_south.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_west_south.png; sourceTree = "<group>"; };
 		B16F8F1C142CC5F100B33867 /* grid_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid_background.png; sourceTree = "<group>"; };
 		B16F8F23142DE26900B33867 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		B16F8F25142DE48900B33867 /* NSMutableArray+CWQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+CWQueue.h"; sourceTree = "<group>"; };
+		B16F8F26142DE48A00B33867 /* NSMutableArray+CWQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CWQueue.m"; sourceTree = "<group>"; };
+		B16F8F28142DE76A00B33867 /* CWPipeQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPipeQueue.h; sourceTree = "<group>"; };
+		B16F8F29142DE76A00B33867 /* CWPipeQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPipeQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,10 @@
 				B16F8EFA142C779400B33867 /* CWGrid.m */,
 				B16F8EFC142C78F500B33867 /* CWPipe.h */,
 				B16F8EFD142C78F500B33867 /* CWPipe.m */,
+				B16F8F25142DE48900B33867 /* NSMutableArray+CWQueue.h */,
+				B16F8F26142DE48A00B33867 /* NSMutableArray+CWQueue.m */,
+				B16F8F28142DE76A00B33867 /* CWPipeQueue.h */,
+				B16F8F29142DE76A00B33867 /* CWPipeQueue.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -279,6 +289,8 @@
 				19F9A6D6142C82D200AC8466 /* CWGridView.m in Sources */,
 				19F9A6DA142C928300AC8466 /* CWPipeView.m in Sources */,
 				19F9A6F1142CC04800AC8466 /* CWPipeQueueView.m in Sources */,
+				B16F8F27142DE48A00B33867 /* NSMutableArray+CWQueue.m in Sources */,
+				B16F8F2A142DE76B00B33867 /* CWPipeQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

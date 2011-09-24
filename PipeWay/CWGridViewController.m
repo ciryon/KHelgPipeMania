@@ -23,7 +23,7 @@
 @implementation CWGridViewController
 
 @synthesize tapGestureRecognizer;
-@synthesize pipeQueue;
+@synthesize pipeRandomizer;
 @synthesize timerLabel;
 @synthesize startDate;
 @synthesize timer;
@@ -114,7 +114,10 @@
 -(void) gridView:(CWGridView*) view didTapCellAtRow:(NSUInteger)row inColumn:(NSUInteger)col;
 {
   NSLog(@"Did tap at (%d,%d)",row,col);
-    CWPipe* newPipe = [[[self.pipeQueue popPipe] retain]autorelease];
+  
+  CWPipe* newPipe = [self.pipeRandomizer popPipeForGridViewController:self];
+  NSLog(@"Got type of type %d",newPipe.type);
+  
   [[CWGrid standardGrid] setPipe: newPipe forRow:row column:col];
   [self.view setNeedsLayout];
   //Add new pipeview to gridview

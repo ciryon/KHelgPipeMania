@@ -8,49 +8,44 @@
 
 #import "CWPipeQueueView.h"
 
+#define kNumberOfPipesToShow 5
 
 @implementation CWPipeQueueView
 
 @synthesize datasource;
 
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
+
 -(void)layoutSubviews;
 {
-    
-    NSUInteger numberOfPipes = [self.datasource numberOfItemsInQueue:self];
-    float width = self.frame.size.width;
-    float height = self.frame.size.height;
-    for (int i = 0; i<numberOfPipes; i++) {
-        CWPipeView* pipeView = [self.datasource pipeQueueView:self pipeForIndex:i];
-        if (pipeView!=nil) {
-                    float pipeHeight = height/numberOfPipes;
-                    float x = 0;
-                    float y = 0 + pipeHeight*i;
-                    pipeView.frame = CGRectMake(x, y,width, pipeHeight);
-                      }
-        [self addSubview:pipeView];
+  
+  float width = self.frame.size.width;
+  float height = self.frame.size.height;
+  for (UIView *subview in [self subviews]) {
+    [subview removeFromSuperview];
+  }
+  
+  for (int i = 0; i<kNumberOfPipesToShow; i++) {
+    CWPipeView* pipeView = [self.datasource pipeQueueView:self pipeForIndex:i];
+    if (pipeView!=nil) {
+      if (pipeView.imageView.image==nil) {
+        NSLog(@"WARNING! nil image");
+      }
+      float pipeHeight = height/kNumberOfPipesToShow;
+      float x = 0;
+      float y = pipeHeight*i;
+      pipeView.frame = CGRectMake(x, y,width, pipeHeight);
+      [self addSubview:pipeView];
     }
+  }
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+
+
+
 
 - (void)dealloc
 {
-    [super dealloc];
+  [super dealloc];
 }
 
 @end
