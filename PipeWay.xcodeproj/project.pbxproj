@@ -34,6 +34,13 @@
 		B16F8F24142DE26900B33867 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F23142DE26900B33867 /* placeholder.png */; };
 		B16F8F27142DE48A00B33867 /* NSMutableArray+CWQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8F26142DE48A00B33867 /* NSMutableArray+CWQueue.m */; };
 		B16F8F2A142DE76B00B33867 /* CWPipeQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8F29142DE76A00B33867 /* CWPipeQueue.m */; };
+		B16F8F33142FB86A00B33867 /* pipe_horizontal_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F2C142FB86A00B33867 /* pipe_horizontal_water.png */; };
+		B16F8F34142FB86A00B33867 /* pipe_north_east_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F2D142FB86A00B33867 /* pipe_north_east_water.png */; };
+		B16F8F35142FB86A00B33867 /* pipe_plus_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F2E142FB86A00B33867 /* pipe_plus_water.png */; };
+		B16F8F36142FB86A00B33867 /* pipe_south_east_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F2F142FB86A00B33867 /* pipe_south_east_water.png */; };
+		B16F8F37142FB86A00B33867 /* pipe_vertical_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F30142FB86A00B33867 /* pipe_vertical_water.png */; };
+		B16F8F38142FB86A00B33867 /* pipe_west_north_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F31142FB86A00B33867 /* pipe_west_north_water.png */; };
+		B16F8F39142FB86A00B33867 /* pipe_west_south_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F32142FB86A00B33867 /* pipe_west_south_water.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +85,13 @@
 		B16F8F26142DE48A00B33867 /* NSMutableArray+CWQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+CWQueue.m"; sourceTree = "<group>"; };
 		B16F8F28142DE76A00B33867 /* CWPipeQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPipeQueue.h; sourceTree = "<group>"; };
 		B16F8F29142DE76A00B33867 /* CWPipeQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPipeQueue.m; sourceTree = "<group>"; };
+		B16F8F2C142FB86A00B33867 /* pipe_horizontal_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_horizontal_water.png; sourceTree = "<group>"; };
+		B16F8F2D142FB86A00B33867 /* pipe_north_east_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_north_east_water.png; sourceTree = "<group>"; };
+		B16F8F2E142FB86A00B33867 /* pipe_plus_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_plus_water.png; sourceTree = "<group>"; };
+		B16F8F2F142FB86A00B33867 /* pipe_south_east_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_south_east_water.png; sourceTree = "<group>"; };
+		B16F8F30142FB86A00B33867 /* pipe_vertical_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_vertical_water.png; sourceTree = "<group>"; };
+		B16F8F31142FB86A00B33867 /* pipe_west_north_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_west_north_water.png; sourceTree = "<group>"; };
+		B16F8F32142FB86A00B33867 /* pipe_west_south_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_west_south_water.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,8 +206,24 @@
 		B16F8F0D142CC27400B33867 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				B16F8F2B142FB84A00B33867 /* pipes */,
 				B16F8F23142DE26900B33867 /* placeholder.png */,
 				B16F8F1C142CC5F100B33867 /* grid_background.png */,
+			);
+			name = images;
+			path = Resources/images;
+			sourceTree = SOURCE_ROOT;
+		};
+		B16F8F2B142FB84A00B33867 /* pipes */ = {
+			isa = PBXGroup;
+			children = (
+				B16F8F2C142FB86A00B33867 /* pipe_horizontal_water.png */,
+				B16F8F2D142FB86A00B33867 /* pipe_north_east_water.png */,
+				B16F8F2E142FB86A00B33867 /* pipe_plus_water.png */,
+				B16F8F2F142FB86A00B33867 /* pipe_south_east_water.png */,
+				B16F8F30142FB86A00B33867 /* pipe_vertical_water.png */,
+				B16F8F31142FB86A00B33867 /* pipe_west_north_water.png */,
+				B16F8F32142FB86A00B33867 /* pipe_west_south_water.png */,
 				B16F8F0E142CC27400B33867 /* pipe_horizontal.png */,
 				B16F8F0F142CC27400B33867 /* pipe_north_east.png */,
 				B16F8F10142CC27400B33867 /* pipe_plus.png */,
@@ -202,9 +232,8 @@
 				B16F8F13142CC27400B33867 /* pipe_west_north.png */,
 				B16F8F14142CC27400B33867 /* pipe_west_south.png */,
 			);
-			name = images;
-			path = Resources/images;
-			sourceTree = SOURCE_ROOT;
+			name = pipes;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -269,6 +298,13 @@
 				B16F8F1B142CC27400B33867 /* pipe_west_south.png in Resources */,
 				B16F8F1D142CC5F100B33867 /* grid_background.png in Resources */,
 				B16F8F24142DE26900B33867 /* placeholder.png in Resources */,
+				B16F8F33142FB86A00B33867 /* pipe_horizontal_water.png in Resources */,
+				B16F8F34142FB86A00B33867 /* pipe_north_east_water.png in Resources */,
+				B16F8F35142FB86A00B33867 /* pipe_plus_water.png in Resources */,
+				B16F8F36142FB86A00B33867 /* pipe_south_east_water.png in Resources */,
+				B16F8F37142FB86A00B33867 /* pipe_vertical_water.png in Resources */,
+				B16F8F38142FB86A00B33867 /* pipe_west_north_water.png in Resources */,
+				B16F8F39142FB86A00B33867 /* pipe_west_south_water.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

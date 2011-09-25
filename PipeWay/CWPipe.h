@@ -8,14 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+#define kStepsBetweenDryAndWater 10
+
 typedef enum {
   CWPipeTypeVertical = 0,     // |
   CWPipeTypeHorizontal = 1,   // -
   CWPipeTypeNorthWest = 2,    // _|
   CWPipeTypeNorthEast = 3,    // |_
-  CWPipeTypeSouthWest = 4,
-  CWPipeTypeSouthEast = 5, 
-  CWPipeTypeCross = 6
+  CWPipeTypeSouthWest = 4,    // _|
+  CWPipeTypeSouthEast = 5,    // |-
+  CWPipeTypeCross = 6,        // -|-
+  CWPipeTypeVerticalWaterFilled = 10,     // |
+  CWPipeTypeHorizontalWaterFilled = 11,   // -
+  CWPipeTypeNorthWestWaterFilled = 12,    // _|
+  CWPipeTypeNorthEastWaterFilled = 13,    // |_
+  CWPipeTypeSouthWestWaterFilled = 14,    // _|
+  CWPipeTypeSouthEastWaterFilled = 15,    // |-
+  CWPipeTypeCrossWaterFilled = 16        // -|-  
   } CWPipeType;
 
 

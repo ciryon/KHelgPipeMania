@@ -46,6 +46,29 @@
     case CWPipeTypeSouthWest:
       imageName = @"pipe_west_south";
       break;
+    case CWPipeTypeCrossWaterFilled:
+      imageName = @"pipe_plus_water";
+      break;
+    case CWPipeTypeHorizontalWaterFilled:
+      imageName = @"pipe_horizontal_water";
+      break;
+    case CWPipeTypeVerticalWaterFilled:
+      imageName = @"pipe_vertical_water";
+      break;
+    case CWPipeTypeNorthEastWaterFilled:
+      imageName = @"pipe_north_east_water";
+      break;
+    case CWPipeTypeNorthWestWaterFilled:
+      imageName = @"pipe_west_north_water";
+      break;
+    case CWPipeTypeSouthEastWaterFilled:
+      imageName = @"pipe_south_east_water";
+      break;
+    case CWPipeTypeSouthWestWaterFilled:
+      imageName = @"pipe_west_south_water";
+      break;      
+      
+      
     default:
       imageName = @"placeholder";
       break;
