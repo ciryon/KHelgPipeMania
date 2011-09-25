@@ -41,6 +41,16 @@
 		B16F8F37142FB86A00B33867 /* pipe_vertical_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F30142FB86A00B33867 /* pipe_vertical_water.png */; };
 		B16F8F38142FB86A00B33867 /* pipe_west_north_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F31142FB86A00B33867 /* pipe_west_north_water.png */; };
 		B16F8F39142FB86A00B33867 /* pipe_west_south_water.png in Resources */ = {isa = PBXBuildFile; fileRef = B16F8F32142FB86A00B33867 /* pipe_west_south_water.png */; };
+		B1D77373142FBB22002D312F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D77372142FBB22002D312F /* SenTestingKit.framework */; };
+		B1D77374142FBB22002D312F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F9A671142C715A00AC8466 /* UIKit.framework */; };
+		B1D77375142FBB22002D312F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F9A673142C715A00AC8466 /* Foundation.framework */; };
+		B1D7737E142FBB22002D312F /* PipeWayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D7737D142FBB22002D312F /* PipeWayTests.m */; };
+		B1D77385142FBBFD002D312F /* CWGridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D77384142FBBFD002D312F /* CWGridTests.m */; };
+		B1D77387142FBC64002D312F /* CWGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8EFA142C779400B33867 /* CWGrid.m */; };
+		B1D77388142FBC6B002D312F /* CWPipe.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8EFD142C78F500B33867 /* CWPipe.m */; };
+		B1D7738B142FC018002D312F /* CWPipeQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D7738A142FC018002D312F /* CWPipeQueueTests.m */; };
+		B1D7738C142FC045002D312F /* CWPipeQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8F29142DE76A00B33867 /* CWPipeQueue.m */; };
+		B1D7738D142FC11A002D312F /* NSMutableArray+CWQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B16F8F26142DE48A00B33867 /* NSMutableArray+CWQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +102,15 @@
 		B16F8F30142FB86A00B33867 /* pipe_vertical_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_vertical_water.png; sourceTree = "<group>"; };
 		B16F8F31142FB86A00B33867 /* pipe_west_north_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_west_north_water.png; sourceTree = "<group>"; };
 		B16F8F32142FB86A00B33867 /* pipe_west_south_water.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pipe_west_south_water.png; sourceTree = "<group>"; };
+		B1D77371142FBB22002D312F /* PipeWayTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PipeWayTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D77372142FBB22002D312F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B1D77378142FBB22002D312F /* PipeWayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PipeWayTests-Info.plist"; sourceTree = "<group>"; };
+		B1D7737C142FBB22002D312F /* PipeWayTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PipeWayTests.h; sourceTree = "<group>"; };
+		B1D7737D142FBB22002D312F /* PipeWayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PipeWayTests.m; sourceTree = "<group>"; };
+		B1D77383142FBBFD002D312F /* CWGridTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWGridTests.h; sourceTree = "<group>"; };
+		B1D77384142FBBFD002D312F /* CWGridTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWGridTests.m; sourceTree = "<group>"; };
+		B1D77389142FC018002D312F /* CWPipeQueueTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPipeQueueTests.h; sourceTree = "<group>"; };
+		B1D7738A142FC018002D312F /* CWPipeQueueTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPipeQueueTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +124,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B1D7736D142FBB22002D312F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D77373142FBB22002D312F /* SenTestingKit.framework in Frameworks */,
+				B1D77374142FBB22002D312F /* UIKit.framework in Frameworks */,
+				B1D77375142FBB22002D312F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -112,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				19F9A677142C715A00AC8466 /* PipeWay */,
+				B1D77376142FBB22002D312F /* PipeWayTests */,
 				19F9A670142C715A00AC8466 /* Frameworks */,
 				19F9A66E142C715A00AC8466 /* Products */,
 			);
@@ -121,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				19F9A66D142C715A00AC8466 /* PipeWay.app */,
+				B1D77371142FBB22002D312F /* PipeWayTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +162,7 @@
 				19F9A671142C715A00AC8466 /* UIKit.framework */,
 				19F9A673142C715A00AC8466 /* Foundation.framework */,
 				19F9A675142C715A00AC8466 /* CoreGraphics.framework */,
+				B1D77372142FBB22002D312F /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,6 +267,36 @@
 			name = pipes;
 			sourceTree = "<group>";
 		};
+		B1D77376142FBB22002D312F /* PipeWayTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1D77386142FBC42002D312F /* Unit Tests */,
+				B1D7737C142FBB22002D312F /* PipeWayTests.h */,
+				B1D7737D142FBB22002D312F /* PipeWayTests.m */,
+				B1D77377142FBB22002D312F /* Supporting Files */,
+			);
+			path = PipeWayTests;
+			sourceTree = "<group>";
+		};
+		B1D77377142FBB22002D312F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B1D77378142FBB22002D312F /* PipeWayTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B1D77386142FBC42002D312F /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1D77383142FBBFD002D312F /* CWGridTests.h */,
+				B1D77384142FBBFD002D312F /* CWGridTests.m */,
+				B1D77389142FC018002D312F /* CWPipeQueueTests.h */,
+				B1D7738A142FC018002D312F /* CWPipeQueueTests.m */,
+			);
+			name = "Unit Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +316,24 @@
 			productName = PipeWay;
 			productReference = 19F9A66D142C715A00AC8466 /* PipeWay.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B1D77370142FBB22002D312F /* PipeWayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1D77380142FBB22002D312F /* Build configuration list for PBXNativeTarget "PipeWayTests" */;
+			buildPhases = (
+				B1D7736C142FBB22002D312F /* Sources */,
+				B1D7736D142FBB22002D312F /* Frameworks */,
+				B1D7736E142FBB22002D312F /* Resources */,
+				B1D7736F142FBB22002D312F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PipeWayTests;
+			productName = PipeWayTests;
+			productReference = B1D77371142FBB22002D312F /* PipeWayTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -277,6 +357,7 @@
 			projectRoot = "";
 			targets = (
 				19F9A66C142C715A00AC8466 /* PipeWay */,
+				B1D77370142FBB22002D312F /* PipeWayTests */,
 			);
 		};
 /* End PBXProject section */
@@ -308,7 +389,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B1D7736E142FBB22002D312F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B1D7736F142FBB22002D312F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		19F9A669142C715A00AC8466 /* Sources */ = {
@@ -327,6 +431,20 @@
 				19F9A6F1142CC04800AC8466 /* CWPipeQueueView.m in Sources */,
 				B16F8F27142DE48A00B33867 /* NSMutableArray+CWQueue.m in Sources */,
 				B16F8F2A142DE76B00B33867 /* CWPipeQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1D7736C142FBB22002D312F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D7737E142FBB22002D312F /* PipeWayTests.m in Sources */,
+				B1D77385142FBBFD002D312F /* CWGridTests.m in Sources */,
+				B1D77387142FBC64002D312F /* CWGrid.m in Sources */,
+				B1D77388142FBC6B002D312F /* CWPipe.m in Sources */,
+				B1D7738B142FC018002D312F /* CWPipeQueueTests.m in Sources */,
+				B1D7738C142FC045002D312F /* CWPipeQueue.m in Sources */,
+				B1D7738D142FC11A002D312F /* NSMutableArray+CWQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +542,56 @@
 			};
 			name = Release;
 		};
+		B1D77381142FBB22002D312F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PipeWay/PipeWay-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "PipeWayTests/PipeWayTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B1D77382142FBB22002D312F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PipeWay/PipeWay-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				INFOPLIST_FILE = "PipeWayTests/PipeWayTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,6 +612,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B1D77380142FBB22002D312F /* Build configuration list for PBXNativeTarget "PipeWayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1D77381142FBB22002D312F /* Debug */,
+				B1D77382142FBB22002D312F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

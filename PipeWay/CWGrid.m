@@ -29,11 +29,6 @@ static CWGrid *_grid;
         [columnArray insertObject:obj atIndex:j];
       }
     }
-    
-    
-    // Temp insert one
-    CWPipe *pipe = [[CWPipe alloc] initWithType:CWPipeTypeNorthEast];
-    [_grid setPipe:pipe forRow:5 column:5];
   }
   return _grid;
 }
@@ -87,7 +82,7 @@ static CWGrid *_grid;
   int counter = 0;
   for (NSArray *columnArray in self.rowArray) {
     for (CWPipe *pipe in columnArray) {
-      if (pipe!=nil && [pipe isKindOfClass:[UIView class]]) {
+      if (pipe!=nil && [pipe isKindOfClass:[CWPipe class]]) {
         counter++;
       }
     }
